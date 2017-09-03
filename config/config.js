@@ -40,7 +40,7 @@ config.development = {
     // Binary files storage dir, Do not use tmpdir and it's public download dir.
     storageDir: process.env.STORAGE_DIR || "/inetpub/code_push_download/storage",
     // Binary files download host address which Code Push Server listen to. the files storage in storageDir.
-    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://113.52.134.160:8088/download",
+    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://113.52.134.160:3000/download",
     // public static download spacename.
     public: process.env.PUBLIC || '/inetpub/code_push_download/download'
   },
@@ -61,7 +61,7 @@ config.development = {
     // create patch updates's number. default value is 3
     diffNums: 3,
     // data dir for caclulate diff files. it's optimization.
-    dataDir: process.env.DATA_DIR || "/Users/tablee/workspaces/data",
+    dataDir: process.env.DATA_DIR || "/inetpub/code_push_download/data",
     // storageType which is your binary package files store. options value is ("local" | "qiniu" | "s3")
     storageType: process.env.STORAGE_TYPE || "local",
     // options value is (true | false), when it's true, it will cache updateCheck results in redis.
