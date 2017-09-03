@@ -84,7 +84,7 @@ $ vim config/config.js
 ```
 请检查如下配置是否和你的环境一致,尤其是downloadUrl参数
 
-```json
+```js
   db: {
     username: "root",
     password: null,
@@ -144,7 +144,7 @@ $ node ./bin/www # or code-push-server
 
 or point config file and ENV
 
-```shell
+```sh
 $ CONFIG_FILE=/path/to/config.js NODE_ENV=production node ./bin/www # or CONFIG_FILE=/path/to/config.js NODE_ENV=production code-push-server
 ```
 
@@ -153,7 +153,7 @@ notice. you have to change `tokenSecret` in config.js for security.
 ## Default listen Host/Port  0.0.0.0/3000 
 you can change like this.
 
-```shell
+```sh
 $ PORT=3000 HOST=127.0.0.1 NODE_ENV=production node ./bin/www # or PORT=3000 HOST=127.0.0.1 NODE_ENV=production code-push-server
 ```
 
@@ -167,7 +167,7 @@ $ code-push login http://127.0.0.1:3000 #login in browser account:admin password
 
 change admin password eg.
 
-```shell
+```sh
 $ curl -X PATCH -H "Authorization: Bearer mytoken" -H "Accept: application/json" -H "Content-Type:application/json" -d '{"oldPassword":"123456","newPassword":"654321"}' http://127.0.0.1:3000/users/password
 ```
 
