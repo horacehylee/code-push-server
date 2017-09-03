@@ -44,7 +44,7 @@ $ code-push login http://api.code-push.com:8080 #登录
 
 ## INSTALL FROM NPM PACKAGE
 
-```shell
+```sh
 $ npm install code-push-server -g
 $ code-push-server-db init --dbhost localhost --dbuser root --dbpassword #初始化mysql数据库
 $ code-push-server #启动服务 浏览器中打开 http://127.0.0.1:3000
@@ -52,22 +52,22 @@ $ code-push-server #启动服务 浏览器中打开 http://127.0.0.1:3000
 
 ## INSTALL FROM SOURCE CODE
 
-```shell
+```sh
 $ git clone https://github.com/lisong/code-push-server.git
 $ cd code-push-server
 $ npm install
-$ ./bin/db init --dbhost localhost --dbuser root --dbpassword #初始化mysql数据库
-$ ./bin/www #启动服务 浏览器中打开 http://127.0.0.1:3000
+$ node ./bin/db init --dbhost localhost --dbuser root --dbpassword #初始化mysql数据库
+$ node ./bin/www #启动服务 浏览器中打开 http://127.0.0.1:3000
 ```
 
 ## UPGRADE
 
 *from source code*
 
-```shell
+```sh
 $ cd /path/to/code-push-server
 $ git pull --rebase origin master
-$ ./bin/db upgrade --dbhost localhost --dbuser root --dbpassword #升级codepush数据库
+$ node ./bin/db upgrade --dbhost localhost --dbuser root --dbpassword #升级codepush数据库
 $ #restart code-push-server
 ```
 
@@ -79,12 +79,12 @@ $ #restart code-push-server
 ```
 
 ## CONFIG
-```shell
+```sh
 $ vim config/config.js
 ```
 请检查如下配置是否和你的环境一致,尤其是downloadUrl参数
 
-```
+```json
   db: {
     username: "root",
     password: null,
@@ -138,7 +138,7 @@ read [config.js](https://github.com/lisong/code-push-server/blob/master/config/c
 
 ## RUN
 
-```shell
+```sh
 $ node ./bin/www # or code-push-server
 ```
 
