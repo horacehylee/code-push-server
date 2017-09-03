@@ -136,7 +136,7 @@ read [config.js](https://github.com/lisong/code-push-server/blob/master/config/c
 - 配置local存储,修改config/config.js中storageType值为local,配置中local下面storageDir和downloadUrl，如果不在同一台机器上，downloadUrl请指定域名或者ip地址
 
 
-## RUN
+## Usage
 
 ```sh
 $ node ./bin/www # or code-push-server
@@ -160,10 +160,12 @@ $ PORT=3000 HOST=127.0.0.1 NODE_ENV=production node ./bin/www # or PORT=3000 HOS
 ## [code-push-cli](https://github.com/Microsoft/code-push)
 Use code-push-cli manager CodePushServer
 
-```shell
+```sh
 $ npm install code-push-cli@latest -g
-$ code-push login http://127.0.0.1:3000 #login in browser account:admin password:123456
+$ code-push login http://113.52.134.160:3000 #login in browser account:admin password:123456
+$ code-push app add firstApp-android android cordova # add app
 ```
+Copy `Production` and `Staging` keys
 
 change admin password eg.
 
