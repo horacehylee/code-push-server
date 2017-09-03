@@ -40,7 +40,7 @@ config.development = {
     // Binary files storage dir, Do not use tmpdir and it's public download dir.
     storageDir: process.env.STORAGE_DIR || "/inetpub/code_push_download/storage",
     // Binary files download host address which Code Push Server listen to. the files storage in storageDir.
-    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://113.52.134.160:3000/download",
+    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://113.52.134.160:8088/storage",
     // public static download spacename.
     public: process.env.PUBLIC || '/inetpub/code_push_download/download'
   },
